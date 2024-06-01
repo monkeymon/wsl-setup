@@ -11,20 +11,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
-
-export ZSH_PLUGINS="\\plugins=(
-git\\
-dotenv\\
-zsh-syntax-highlighting\\
-zsh-autosuggestions\\
-ansible\\
-aws\\
-dotnet\\
-nvm\\
-npm\\
-tmux\\
-)"
-sed -i "s/plugins=(git)/{$ZSH_PLUGINS}/" $HOME/.zshrc
+sed -i "s/plugins=(git)/plugins=(\n git\n dotenv\n zsh-syntax-highlighting\n zsh-autosuggestions\n ansible\n aws\n dotnet\n nvm\n npm\n tmux\n )/" $HOME/.zshrc
 
 zsh
 
