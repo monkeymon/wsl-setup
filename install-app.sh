@@ -1,5 +1,7 @@
 #!/bin/bash
 
+mkdir -p .tmp
+cd .tmp
 curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 curl -fsSL https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip -o awscli.zip
@@ -16,3 +18,8 @@ sudo ./aws/install
 
 nvm install --lts
 nvm use --lts
+
+curl -fsSL https://getcomposer.org/installer -o composer-setup.php
+php composer-setup.php
+cd ..
+rm -rf .tmp
