@@ -24,7 +24,7 @@ nvm\\
 npm\\
 tmux\\
 )"
-sed -i 's/plugins=(git)/${ZSH_PLUGINS}/' $HOME/.zshrc
+sed -i "s/plugins=(git)/{$ZSH_PLUGINS}/" $HOME/.zshrc
 
 zsh
 
