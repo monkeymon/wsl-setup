@@ -5,7 +5,7 @@ ssh-keygen -t ed25519 -C "chris.sim+windows-wsl@antpolis.com" -f ~/.ssh/id_ed255
 sudo apt -y update && sudo apt -y upgrade
 sudo apt -y install zsh software-properties-common
 sudo add-apt-repository ppa:ondrej/php
-zsh
+chsh -s $(which zsh)
 
 
 
