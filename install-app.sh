@@ -16,10 +16,12 @@ sudo apt -y install unzip php8.3 php8.3-{mysql,zip,bcmath,dev,zip,common,cli,fpm
 unzip awscli.zip
 sudo ./aws/install 
 
+source ~/.zshrc
 nvm install --lts
 nvm use --lts
 
 curl -fsSL https://getcomposer.org/installer -o composer-setup.php
 php composer-setup.php
+sudo mv composer.phar /usr/local/bin/composer
 cd ..
 rm -rf .tmp
