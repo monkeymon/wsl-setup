@@ -1,7 +1,7 @@
 #! /bin/bash
 
-if ! test -f ~/.ssh/id_ed25519; then
-  ssh-keygen -t ed25519 -C "chris.sim+windows-wsl@antpolis.com" -f ~/.ssh/id_ed25519 -N ""  
+if ! [ -f $HOME/.ssh/id_ed25519 ]; then
+  ssh-keygen -t ed25519 -C "$HOST@antpolis.com" -f $HOME/.ssh/id_ed25519 -N ""  
 fi
 
 
